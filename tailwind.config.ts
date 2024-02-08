@@ -29,7 +29,7 @@ const config: Config = {
         p4: "#0061F2",
         p5: "#EC3F69",
         p6: "#2B9943",
-        g500: "#8F9BBA",
+        g500: "# 8F9BBA",
         g600: "#A3AED0",
         g900: "#1B2559",
       },
