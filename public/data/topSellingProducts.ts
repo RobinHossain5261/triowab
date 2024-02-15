@@ -7,7 +7,7 @@ import product4 from "@/../../public/images/image4.png";
 export const products = [
   {
     id: 1,
-    name: "Blutooth Devices",
+    name: "Headphone",
     price: "$10",
     order: "34,666 Piece",
     seles: "$3,46,660",

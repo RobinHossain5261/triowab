@@ -1,3 +1,4 @@
+import BarChart from "@/components/Chart/BarChart";
 import Distrutebuted from "@/components/Chart/Distrutebuted";
 import LineChart from "@/components/Chart/LineChart";
 import SmallCard from "@/components/Pages/Dashboard/SmallCard";
@@ -63,6 +64,9 @@ const Dashboard = () => {
       </div>
       <div className="mt-7">
         <TopProducts />
+        <div>
+          <BarChart />
+        </div>
       </div>
     </div>
   );
