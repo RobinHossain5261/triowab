@@ -1,35 +1,32 @@
 "use client";
-import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
+import ReactApexChart from "react-apexcharts";
 
-// Import ApexCharts dynamically to prevent server-side rendering issues
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
-  ssr: false,
-});
-
-const LineChart = () => {
+const Distrutebuted = () => {
   const series = [
     {
-      name: "Desktops",
-      data: [10, 41, 75, 51, 49, 82, 69, 91, 138, 87, 34, 121],
+      data: [21, 22, 10, 28, 16, 21, 13, 30, 40, 43, 27, 19],
     },
   ];
+
   const options: ApexOptions = {
     chart: {
       toolbar: {
         show: false,
       },
-      type: "line",
-      zoom: {
-        enabled: false,
+      type: "bar",
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: "45%",
+        distributed: true,
       },
     },
     dataLabels: {
       enabled: false,
     },
-    colors: ["#693FEC"],
-    stroke: {
-      curve: "smooth",
+    legend: {
+      show: false,
     },
     xaxis: {
       categories: [
@@ -59,11 +56,11 @@ const LineChart = () => {
     <ReactApexChart
       options={options}
       series={series}
-      type="line"
+      type="bar"
       height={300}
       width="100%"
     />
   );
 };
 
-export default LineChart;
+export default Distrutebuted;
